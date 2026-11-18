@@ -12,7 +12,7 @@ This policy explains what information [Game title two] ("the game") collects, wh
 
 ## What the game collects
 
-[List each kind of data the game or any third-party SDK in it collects, such as device identifiers, gameplay progress, purchase history or crash logs. If the game collects nothing, say so.]
+[List each kind of data the game, or any outside service it uses, collects, such as device details, game progress, purchases or crash reports. If the game collects nothing, say so.]
 
 ## How it is used
 
