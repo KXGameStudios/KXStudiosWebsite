@@ -1,0 +1,64 @@
+---
+layout: page
+title: Contact us
+description: Send a message to KX Game Studios.
+---
+{%- assign games = site.pages | where: "layout", "game" | sort: "order" -%}
+{%- assign connected = false -%}
+{%- if site.contact_email and site.contact_email != "" -%}
+  {%- assign connected = true -%}
+{%- endif -%}
+<p>Questions, bug reports and feedback all go to the same two people. Fill in the form and we will reply by email.</p>
+
+{%- unless connected %}
+<p class="notice small">This form is not connected yet, so messages cannot be sent.</p>
+{%- endunless %}
+
+{%- comment %}
+  The form posts to FormSubmit, which forwards each message to site.contact_email
+  (set in _config.yml). See README.md, "Contact form".
+{% endcomment %}
+<form class="form" method="POST" action="{% if connected %}https://formsubmit.co/{{ site.contact_email }}{% else %}#{% endif %}">
+  <input type="hidden" name="_subject" value="KX Game Studios website: new message">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="{{ '/contact/thanks/' | absolute_url }}">
+  <div class="hp" aria-hidden="true">
+    <label for="contact-honey">Leave this field empty</label>
+    <input id="contact-honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
+  </div>
+
+  <div class="field">
+    <label class="label" for="contact-name">Name</label>
+    <input id="contact-name" type="text" name="name" autocomplete="name" required>
+  </div>
+  <div class="field">
+    <label class="label" for="contact-email">Email</label>
+    <input id="contact-email" type="email" name="email" autocomplete="email" required>
+  </div>
+  <div class="field">
+    <label class="label" for="contact-topic">About</label>
+    <select id="contact-topic" name="about">
+      <option value="General">General</option>
+      {%- for game in games %}
+      <option value="{{ game.title | escape }}" data-slug="{{ game.url | split: '/' | last }}">{{ game.title }}</option>
+      {%- endfor %}
+    </select>
+  </div>
+  <div class="field">
+    <label class="label" for="contact-message">Message</label>
+    <textarea id="contact-message" name="message" required></textarea>
+  </div>
+  <button class="btn btn-accent label" type="submit"{% unless connected %} disabled{% endunless %}>Send message</button>
+</form>
+
+<script>
+// Links like /contact/?game=game-one preselect that game in the "About" list.
+(function () {
+  var slug = new URLSearchParams(location.search).get("game");
+  if (!slug) return;
+  var options = document.querySelectorAll("#contact-topic option[data-slug]");
+  for (var i = 0; i < options.length; i++) {
+    if (options[i].getAttribute("data-slug") === slug) options[i].selected = true;
+  }
+})();
+</script>

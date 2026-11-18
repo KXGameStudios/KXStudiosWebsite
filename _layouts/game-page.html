@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{%- comment %} A text page that belongs to one game: privacy policy, support, and so on. {% endcomment -%}
+{%- include game-context.html -%}
+<div class="wrap">
+  <article class="prose page">
+    {%- if game %}
+    <a class="label back-link" href="{{ game.url | relative_url }}">&larr; {{ game.title }}</a>
+    {%- endif %}
+    <h1 class="h1">{{ page.title }}</h1>
+    {%- if page.last_updated %}
+    <p class="small muted">Last updated {{ page.last_updated | date: "%-d %B %Y" }}</p>
+    {%- endif %}
+    {{ content }}
+  </article>
+</div>

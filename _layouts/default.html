@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+{%- include game-context.html -%}
+{%- if page.url == "/" -%}
+  {%- assign page_title = site.title | append: " - " | append: site.tagline -%}
+{%- elsif game and page.path != game.path -%}
+  {%- assign page_title = page.title | append: " - " | append: game.title | append: " - " | append: site.title -%}
+{%- else -%}
+  {%- assign page_title = page.title | append: " - " | append: site.title -%}
+{%- endif -%}
+{%- assign page_description = page.description | default: page.tagline | default: site.description -%}
+{%- assign og_image = "/assets/assets/graphics/og-image.png" -%}
+{%- if game and game.og_image -%}
+  {%- assign og_image = game.url | append: game.og_image -%}
+{%- endif %}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title | escape }}</title>
+<meta name="description" content="{{ page_description | strip_html | escape }}">
+<meta name="theme-color" content="#120a24">
+{%- if page.noindex %}
+<meta name="robots" content="noindex">
+{%- endif %}
+<link rel="icon" href="{{ '/assets/assets/icons/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/assets/assets/icons/kx-app-icon-32.png' | relative_url }}" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/assets/assets/icons/apple-touch-icon.png' | relative_url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ page_description | strip_html | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ og_image | absolute_url }}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/tokens.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/css/site.css' | relative_url }}">
+</head>
+<body>
+<a class="skip-link label" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ '/assets/assets/logos/kx-logo-horizontal-on-dark.svg' | relative_url }}" alt="KX Game Studios" width="139" height="40"></a>
+    <nav class="label" aria-label="Main">
+      <a href="{{ '/#games' | relative_url }}">Games</a>
+      <a href="{{ '/contact/' | relative_url }}"{% if page.url == "/contact/" %} aria-current="page"{% endif %}>Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+{{ content }}
+</main>
+<div class="pattern-band" aria-hidden="true"></div>
+<footer class="site-footer">
+  <div class="wrap small">
+    <img src="{{ '/assets/assets/logos/kx-mark-on-dark.svg' | relative_url }}" alt="" width="48" height="30">
+    <span>&copy; {{ site.time | date: "%Y" }} KX Game Studios</span>
+    <span class="site-footer-links">
+      {%- if game and game_privacy %}
+      <a href="{{ game_privacy.url | relative_url }}">Privacy policy</a>
+      {%- endif %}
+      <a href="{{ '/contact/' | relative_url }}">Contact us</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

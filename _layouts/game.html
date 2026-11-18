@@ -1,0 +1,88 @@
+---
+layout: default
+---
+{%- include game-context.html -%}
+{%- assign has_store = false -%}
+{%- if page.app_store_url or page.play_store_url -%}
+  {%- assign has_store = true -%}
+{%- endif -%}
+<div class="hero">
+  <div class="wrap game-hero">
+    {% include game-icon.html game=page size=120 %}
+    <div>
+      <span class="label eyebrow">{% if has_store %}Out now{% else %}Coming soon{% endif %}</span>
+      <h1 class="display">{{ page.title }}</h1>
+      {%- if page.tagline %}
+      <p class="lead">{{ page.tagline }}</p>
+      {%- endif %}
+      {%- if has_store %}
+      <div class="btn-row">
+        {%- if page.app_store_url %}
+        <a class="btn btn-primary label" href="{{ page.app_store_url }}" rel="noopener">Download on the App Store</a>
+        {%- endif %}
+        {%- if page.play_store_url %}
+        <a class="btn btn-primary label" href="{{ page.play_store_url }}" rel="noopener">Get it on Google Play</a>
+        {%- endif %}
+      </div>
+      {%- endif %}
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  {%- assign body = content | strip -%}
+  {%- if body != "" %}
+  <section class="prose">
+    <h2 class="h2">About the game</h2>
+    {{ content }}
+  </section>
+  {%- endif %}
+
+  {%- if page.features %}
+  <section>
+    <h2 class="h2">What you do</h2>
+    <div class="grid">
+      {%- for feature in page.features %}
+      <div class="card">
+        <img class="gem-bullet" src="{{ '/assets/assets/logos/kx-gem.svg' | relative_url }}" alt="" width="16" height="16">
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.text }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endif %}
+
+  {%- if page.screenshots %}
+  <section>
+    <h2 class="h2">Screenshots</h2>
+    <div class="screenshots">
+      {%- for shot in page.screenshots %}
+      <img src="{{ page.url | append: shot.file | relative_url }}" alt="{{ shot.alt | escape }}" loading="lazy">
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endif %}
+
+  {%- comment %} Other pages in this game's folder, except ones marked `hidden: true`. {% endcomment -%}
+  {%- assign more_count = 0 -%}
+  {%- capture more_links -%}
+    {%- assign sorted_pages = site.pages | sort: "title" -%}
+    {%- for p in sorted_pages -%}
+      {%- assign p_parts = p.path | split: "/" -%}
+      {%- if p_parts[0] == "games" and p_parts[1] == path_parts[1] and p.path != page.path and p.title -%}
+        {%- unless p.hidden -%}
+          {%- assign more_count = more_count | plus: 1 %}
+      <li><img src="{{ '/assets/assets/logos/kx-gem.svg' | relative_url }}" alt="" width="12" height="12"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- if more_count > 0 %}
+  <section>
+    <h2 class="h2">More</h2>
+    <ul class="gem-list">{{ more_links }}
+    </ul>
+  </section>
+  {%- endif %}
+</div>

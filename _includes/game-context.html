@@ -1,0 +1,16 @@
+{%- comment -%}
+  Works out which game the current page belongs to, from its folder.
+  For any page under games/<slug>/ this sets:
+    game          the game's main page (games/<slug>/index.md), or nil
+    game_privacy  the game's privacy policy page (games/<slug>/privacy.md), or nil
+{%- endcomment -%}
+{%- assign game = nil -%}
+{%- assign game_privacy = nil -%}
+{%- assign path_parts = page.path | split: "/" -%}
+{%- if path_parts[0] == "games" and path_parts.size > 2 -%}
+  {%- assign game_dir = "games/" | append: path_parts[1] | append: "/" -%}
+  {%- assign game_index_path = game_dir | append: "index.md" -%}
+  {%- assign game_privacy_path = game_dir | append: "privacy.md" -%}
+  {%- assign game = site.pages | where: "path", game_index_path | first -%}
+  {%- assign game_privacy = site.pages | where: "path", game_privacy_path | first -%}
+{%- endif -%}

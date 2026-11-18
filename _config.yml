@@ -1,0 +1,27 @@
+# KX Game Studios website. Built by GitHub Pages (Jekyll).
+
+title: KX Game Studios
+tagline: Two players, one studio.
+description: KX Game Studios is a two-person game studio run by Alek and Alex.
+
+# STUB: the address the contact form forwards to. While this is empty the form
+# renders but cannot be submitted. See README.md, "Contact form".
+contact_email: ""
+
+# Leave `url` and `baseurl` unset. GitHub Pages fills them in at build time,
+# for both the default github.io address and a custom domain.
+
+permalink: pretty
+markdown: kramdown
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  # Brand kit documentation and sample page. The kit's tokens.css and
+  # assets/assets/ are published; these are not.
+  - assets/README.md
+  - assets/BRAND.md
+  - assets/tokens.json
+  - assets/example

@@ -1,0 +1,58 @@
+/* KX Game Studios design tokens. Generated from tokens.json.
+   Dark is the default theme. Add data-theme="light" to <html> for the light theme. */
+
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=DM+Sans:wght@400;500&display=swap");
+
+:root, [data-theme="dark"] {
+  --bg: #120a24;
+  --surface: #1c1236;
+  --ink: #ffffff;
+  --muted: #a8a0b8;
+  --line: #2a1f4a;
+  --purple: #6c2bd9;
+  --purple-shade: #4a1ba3;
+  --purple-light: #cdbcf5;
+  --purple-text: #b794ff;
+  --purple-deep: #2a0f5c;
+  --purple-tint: #2a1a4d;
+  --gem: #2fe0d2;
+  --gem-light: #7ff0e8;
+  --gem-glint: #c9fbf6;
+  --gem-shade: #19bdb2;
+  --gem-deep: #0f9c94;
+  --gem-text: #2fe0d2;
+  --black: #0e0b14;
+  --white: #ffffff;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --surface: #f5f2fa;
+  --ink: #0e0b14;
+  --muted: #5f5870;
+  --line: #ddd6ea;
+  --purple-text: #6c2bd9;
+  --purple-tint: #ede5ff;
+  --gem-text: #0b7f7a;
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-12: 48px;
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --font-display: "Chakra Petch", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+}
+
+.display { font-family: var(--font-display); font-size: 64px; line-height: 0.95; font-weight: 700; }
+.h1 { font-family: var(--font-display); font-size: 40px; line-height: 1.1; font-weight: 700; }
+.h2 { font-family: var(--font-display); font-size: 28px; line-height: 1.15; font-weight: 600; }
+.label { font-family: var(--font-display); font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.lead { font-family: var(--font-body); font-size: 20px; line-height: 30px; font-weight: 400; }
+.body { font-family: var(--font-body); font-size: 16px; line-height: 24px; font-weight: 400; }
+.small { font-family: var(--font-body); font-size: 13px; line-height: 18px; font-weight: 400; }

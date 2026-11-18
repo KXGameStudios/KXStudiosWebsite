@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KX Game Studios</title>
+<meta name="description" content="Two players, one studio. Games by Alek and Alex.">
+<meta name="theme-color" content="#120a24">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/icons/kx-app-icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<meta property="og:title" content="KX Game Studios">
+<meta property="og:image" content="../assets/graphics/og-image.png">
+<link rel="stylesheet" href="../tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:24px}
+a{color:var(--purple-text)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 var(--space-6)}
+header{display:flex;align-items:center;justify-content:space-between;padding:var(--space-6) 0}
+header img{height:40px;display:block}
+nav{display:flex;gap:var(--space-6)}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{color:var(--gem-text)}
+.hero{background:var(--bg) url(../assets/graphics/kx-lattice-dark.svg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hero .wrap{padding-top:96px;padding-bottom:96px}
+.hero h1{margin:var(--space-4) 0;max-width:12em}
+.hero p{max-width:34em;color:var(--muted);margin:0 0 var(--space-6)}
+.eyebrow{color:var(--gem-text)}
+.btn{display:inline-block;padding:12px 20px;border:0;border-radius:var(--radius-none);text-decoration:none;cursor:pointer;
+  clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px)}
+.btn-primary{background:var(--purple);color:var(--white)}
+.btn-primary:hover{background:var(--purple-shade)}
+.btn-accent{background:var(--gem);color:var(--black)}
+.btn-accent:hover{background:var(--gem-light)}
+.btn + .btn{margin-left:var(--space-2)}
+section{padding:var(--space-12) 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-6);margin-top:var(--space-6)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);padding:var(--space-6)}
+.card h3{font-family:var(--font-display);font-weight:600;font-size:20px;margin:var(--space-2) 0}
+.card p{color:var(--muted);margin:0}
+.tag{display:inline-flex;align-items:center;gap:var(--space-2);color:var(--gem-text)}
+.tag img{width:12px;height:12px}
+footer{border-top:1px solid var(--line);padding:var(--space-6) 0;color:var(--muted)}
+footer .wrap{display:flex;align-items:center;gap:var(--space-4)}
+footer img{height:24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="#"><img src="../assets/logos/kx-logo-horizontal-on-dark.svg" alt="KX Game Studios"></a>
+    <nav class="label"><a href="#games">Games</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+</div>
+<div class="hero">
+  <div class="wrap">
+    <span class="label eyebrow">Now in development</span>
+    <h1 class="display">Small games with sharp edges</h1>
+    <p class="lead">KX Game Studios is two people, Alek and Alex, making tight, replayable games.</p>
+    <a class="btn btn-accent label" href="#games">See the games</a><a class="btn btn-primary label" href="#contact">Get in touch</a>
+  </div>
+</div>
+<div class="wrap">
+  <section id="games">
+    <h2 class="h2">Games</h2>
+    <div class="grid">
+      <div class="card"><span class="label tag"><img src="../assets/logos/kx-gem.svg" alt="">Placeholder</span><h3>Game title one</h3><p class="body">One sentence on what the player does.</p></div>
+      <div class="card"><span class="label tag"><img src="../assets/logos/kx-gem.svg" alt="">Placeholder</span><h3>Game title two</h3><p class="body">One sentence on what the player does.</p></div>
+      <div class="card"><span class="label tag"><img src="../assets/logos/kx-gem.svg" alt="">Placeholder</span><h3>Game title three</h3><p class="body">One sentence on what the player does.</p></div>
+    </div>
+  </section>
+</div>
+<footer><div class="wrap"><img src="../assets/logos/kx-mark-on-dark.svg" alt=""><span class="small">© KX Game Studios</span></div></footer>
+</body>
+</html>

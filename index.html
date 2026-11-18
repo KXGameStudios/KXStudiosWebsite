@@ -1,0 +1,38 @@
+---
+layout: default
+title: Home
+---
+{%- assign games = site.pages | where: "layout", "game" | sort: "order" -%}
+<div class="hero">
+  <div class="wrap">
+    <span class="label eyebrow">KX Game Studios</span>
+    <h1 class="display">{{ site.tagline }}</h1>
+    <p class="lead">{{ site.description }}</p>
+    <div class="btn-row">
+      <a class="btn btn-accent label" href="#games">See the games</a>
+      <a class="btn btn-primary label" href="{{ '/contact/' | relative_url }}">Contact us</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="games">
+    <h2 class="h2">Games</h2>
+    <div class="grid">
+      {%- for game in games %}
+      <a class="card" href="{{ game.url | relative_url }}">
+        {% include game-icon.html game=game size=72 %}
+        <span class="label tag"><img src="{{ '/assets/assets/logos/kx-gem.svg' | relative_url }}" alt="">{% if game.app_store_url or game.play_store_url %}Out now{% else %}Coming soon{% endif %}</span>
+        <h3>{{ game.title }}</h3>
+        <p>{{ game.tagline }}</p>
+        <span class="label more">View game &rarr;</span>
+      </a>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="h2">About the studio</h2>
+    <p>KX Game Studios is Alek and Alex. The names differ by one letter, K and X, and the logo locks those two letters together around a cut gem. Every game we make hides that gem somewhere for the player to find.</p>
+  </section>
+</div>

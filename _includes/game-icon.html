@@ -1,0 +1,10 @@
+{%- comment -%}
+  Game icon. Pass the game's main page as `game`.
+  Uses the `icon` file from the game's folder, or the studio app icon if none is set.
+{%- endcomment -%}
+{%- if include.game.icon -%}
+  {%- assign icon_src = include.game.url | append: include.game.icon | relative_url -%}
+{%- else -%}
+  {%- assign icon_src = "/assets/assets/icons/kx-app-icon.svg" | relative_url -%}
+{%- endif -%}
+<img class="game-icon" src="{{ icon_src }}" alt="" width="{{ include.size | default: 72 }}" height="{{ include.size | default: 72 }}">
