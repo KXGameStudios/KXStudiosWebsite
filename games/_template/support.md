@@ -15,4 +15,4 @@ Placeholder. This is an example of an extra page for one game. Any page added to
 
 ## Still stuck
 
-Send a message through the [contact form]({{ '/contact/?game=game-one' | relative_url }}) and say what device you are playing on.
+Send a message through the [contact form]({{ '/contact/?game=your-game' | relative_url }}) and say what device you are playing on.

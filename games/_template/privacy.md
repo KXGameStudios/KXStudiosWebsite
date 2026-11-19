@@ -8,7 +8,7 @@ noindex: true  # keeps this page out of search results
 
 **Draft.** This page is a template. Replace every part in [square brackets] with what is true for this game before it is published or linked from a store listing.
 
-This policy explains what information [Game title two] ("the game") collects, why, and what you can do about it. The game is made by KX Game Studios.
+This policy explains what information [Game title one] ("the game") collects, why, and what you can do about it. The game is made by KX Game Studios.
 
 ## What the game collects
 
@@ -36,4 +36,4 @@ If this policy changes, the new version will be posted on this page with a new d
 
 ## Contact
 
-Questions about this policy can be sent through the [contact form]({{ '/contact/?game=game-two' | relative_url }}).
+Questions about this policy can be sent through the [contact form]({{ '/contact/?game=your-game' | relative_url }}).

@@ -16,17 +16,17 @@ The studio site, hosted on GitHub Pages. It is a Jekyll site with no plugins and
 
 ## Add a game
 
-1. Copy `games/game-one/` to `games/<your-game>/`. The folder name becomes the URL: `/games/<your-game>/`.
+1. Copy `games/_template/` to `games/<your-game>/`. The folder name becomes the URL: `/games/<your-game>/`. The template itself is not published, because its name starts with an underscore.
 2. Edit `index.md`. The settings at the top control the page:
    - `title`, `tagline`: shown on the game page and on the home page card.
    - `order`: position on the home page, lowest first.
    - `app_store_url`, `play_store_url`: a button appears for each one that is set. With neither set, the game is shown as "Coming soon".
    - `icon`, `og_image`, `screenshots`: optional image files kept in the game's folder. Without an `icon`, the studio app icon is used.
-   - `features`: the short cards under "What you do".
+   - `features`: the short cards under "What you do". Set `features_title` to change that heading.
    - The text below the settings is the "About the game" section.
-3. Edit `privacy.md` (see below).
+3. Edit `privacy.md` (see below), and in it and `support.md` change `?game=your-game` to the folder name so the contact form preselects the game.
 
-The two games in the repo now are placeholders, including their store links.
+`games/blocks-of-the-ides/` is a complete example.
 
 ### Privacy policy
 

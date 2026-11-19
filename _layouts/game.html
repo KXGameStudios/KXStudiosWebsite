@@ -40,7 +40,7 @@ layout: default
 
   {%- if page.features %}
   <section>
-    <h2 class="h2">What you do</h2>
+    <h2 class="h2">{{ page.features_title | default: "What you do" }}</h2>
     <div class="grid">
       {%- for feature in page.features %}
       <div class="card">

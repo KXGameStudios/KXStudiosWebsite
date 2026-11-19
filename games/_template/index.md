@@ -16,6 +16,7 @@ play_store_url: "https://play.google.com/store/apps/details?id=com.example.place
 #   - file: screenshot-1.png
 #     alt: What the screenshot shows
 
+# features_title: What you do   # heading above the feature cards
 features:
   - title: Feature one
     text: Placeholder. One thing the player does.
