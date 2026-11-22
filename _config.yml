@@ -4,9 +4,9 @@ title: KX Game Studios
 tagline: Refined Mobile Gaming.
 description: Games for iPhone and Android, made by a small independent studio.
 
-# STUB: the address the contact form forwards to. While this is empty the form
-# renders but cannot be submitted. See README.md, "Contact form".
-contact_email: ""
+# The address the contact form forwards to. If this is empty the form renders
+# but cannot be submitted. See README.md, "Contact form".
+contact_email: "support@kxgamestudios.com"
 
 # Leave `url` and `baseurl` unset. GitHub Pages fills them in at build time,
 # for both the default github.io address and a custom domain.
