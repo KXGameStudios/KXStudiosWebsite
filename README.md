@@ -10,6 +10,7 @@ The studio site, hosted on GitHub Pages. It is a Jekyll site with no plugins and
 | `index.html` | Home page. Lists every game automatically. |
 | `games/<game>/` | One folder per game. Everything about a game lives here. |
 | `contact/` | Contact form and its "message sent" page. |
+| `app-ads.txt` | AdMob's authorised sellers file, published as is at `/app-ads.txt`. |
 | `_layouts/`, `_includes/` | Page templates: shared header and footer, game page, text page. |
 | `css/site.css` | Site styles, built on the brand tokens. |
 | `assets/` | The brand kit, unchanged. Read `assets/README.md` before changing how anything looks. |
