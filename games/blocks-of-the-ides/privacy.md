@@ -54,7 +54,7 @@ The game is appropriate for audiences of all ages and is not directed at any par
 
 ## How long data is kept
 
-Data on your device stays until you delete the game. Analytics data is kept by Google for [retention period set in the Firebase console]. Crash reports are kept by Sentry for 30 days.
+Data on your device stays until you delete the game. Analytics data is kept by Google for 14 months. Crash reports are kept by Sentry for 30 days.
 
 Because the game has no accounts, we cannot look up data by your name or email address. If you have a question about your data, contact us and we will help where we can.
 
