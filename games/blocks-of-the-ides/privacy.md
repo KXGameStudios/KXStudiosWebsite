@@ -1,7 +1,7 @@
 ---
 layout: game-page
 title: Privacy policy
-last_updated: 2026-11-26
+last_updated: 2026-11-28
 hidden: true   # keeps this page out of the game's "More" list
 noindex: true  # keeps this page out of search results
 ---
@@ -24,7 +24,7 @@ Your level progress, daily puzzle results and streak, hint balance, settings, pu
 
 **Analytics: Google Analytics for Firebase.** We use this to see how the game is played (which levels are finished, how often hints are used, which settings are popular, etc). It collects gameplay events, your device model, operating system, app version, language and country, and an anonymous ID created for your copy of the game. We do not send names, email addresses, precise location, or anything you type. Where no consent is required, Google may also use your device's advertising ID for these measurements; on iPhone and iPad it can only do so if you allowed tracking. Where consent is required, analytics stays off until you have answered the consent prompt. If you decline, Google receives only measurements that carry no identifier.
 
-**Crash reports and performance: Sentry.** Where no consent is required, the game sends a report when it crashes or hits an error, with the error details, app version, operating system, device model and an anonymous ID created for your copy of the game, so that we can fix it. From some play sessions it also sends how long screens take to open and how long hints take to work out. In regions where consent is required, such as the European Economic Area and the United Kingdom, nothing is sent to Sentry.
+**Crash reports and performance: Sentry.** Where no consent is required, the game sends a report when it crashes, freezes or hits an error, with the error details, app version, operating system, device model and an anonymous ID created for your copy of the game, so that we can fix it. Each time the game starts, it also sends a record that it was opened, with the app version and the same anonymous ID, so that we can see how often the game crashes. From some play sessions it also sends how long screens take to open and how long hints take to work out. In regions where consent is required, such as the European Economic Area and the United Kingdom, nothing is sent to Sentry.
 
 **Purchases: Apple App Store and Google Play.** Purchases are handled by the store you downloaded the game from. We never see your card or payment details. The game keeps a record of completed purchases on your device so that it can unlock what you bought.
 
