@@ -1,7 +1,7 @@
 ---
 layout: game-page
 title: Privacy policy
-last_updated: 2026-11-21
+last_updated: 2026-11-26
 hidden: true   # keeps this page out of the game's "More" list
 noindex: true  # keeps this page out of search results
 ---
@@ -20,11 +20,11 @@ Your level progress, daily puzzle results and streak, hint balance, settings, pu
 
 ## What outside services collect
 
-**Ads: Google AdMob.** The game shows ads between some levels, and offers optional ads in exchange for hints and other rewards. To show and measure ads, AdMob may collect your device's advertising ID, IP address, general location worked out from the IP address, device and app details, and how you interact with ads. Where the law requires it, the game asks for your consent before any ad is requested or loaded. On iPhone and iPad the game also shows Apple's tracking permission prompt. Buying Remove Ads stops the ads between levels; the optional reward ads remain available.
+**Ads: Google AdMob.** The game shows ads between some levels, and offers optional ads in exchange for hints and other rewards. To show and measure ads, AdMob may collect your device's advertising ID, IP address, general location worked out from the IP address, device and app details, and how you interact with ads. Each time the game starts, it asks Google's consent service whether consent is required where you are. Where the law requires it, the game asks for your consent before any ad is requested or loaded. On iPhone and iPad the game also shows Apple's tracking permission prompt. Buying Remove Ads stops the ads between levels; the optional reward ads remain available.
 
-**Analytics: Google Analytics for Firebase.** We use this to see how the game is played (which levels are finished, how often hints are used, which settings are popular, etc). It collects gameplay events, your device model, operating system, app version, language and country, and an anonymous ID created for your copy of the game. We do not send names, email addresses, advertising IDs, precise location, or anything you type. Where consent is required, analytics stays off until you have answered the consent prompt, and stays off if you decline.
+**Analytics: Google Analytics for Firebase.** We use this to see how the game is played (which levels are finished, how often hints are used, which settings are popular, etc). It collects gameplay events, your device model, operating system, app version, language and country, and an anonymous ID created for your copy of the game. We do not send names, email addresses, precise location, or anything you type. Where no consent is required, Google may also use your device's advertising ID for these measurements; on iPhone and iPad it can only do so if you allowed tracking. Where consent is required, analytics stays off until you have answered the consent prompt. If you decline, Google receives only measurements that carry no identifier.
 
-**Crash reports: Sentry.** If the game crashes or hits an error, a report may be sent with the error details, app version, operating system and device model, so that we can fix it.
+**Crash reports and performance: Sentry.** Where no consent is required, the game sends a report when it crashes or hits an error, with the error details, app version, operating system, device model and an anonymous ID created for your copy of the game, so that we can fix it. From some play sessions it also sends how long screens take to open and how long hints take to work out. In regions where consent is required, such as the European Economic Area and the United Kingdom, nothing is sent to Sentry.
 
 **Purchases: Apple App Store and Google Play.** Purchases are handled by the store you downloaded the game from. We never see your card or payment details. The game keeps a record of completed purchases on your device so that it can unlock what you bought.
 
@@ -54,7 +54,7 @@ The game is appropriate for audiences of all ages and is not directed at any par
 
 ## How long data is kept
 
-Data on your device stays until you delete the game. Analytics data is kept by Google for [retention period set in the Firebase console]. Crash reports are kept by Sentry for [retention period set in the Sentry project].
+Data on your device stays until you delete the game. Analytics data is kept by Google for [retention period set in the Firebase console]. Crash reports are kept by Sentry for 30 days.
 
 Because the game has no accounts, we cannot look up data by your name or email address. If you have a question about your data, contact us and we will help where we can.
 
